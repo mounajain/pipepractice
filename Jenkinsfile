@@ -45,8 +45,8 @@ stages {
 				sh '''
 					set +x
 					file="$(pwd)/c_programs/ABC.exe"
-					[[ -f "$file" ]] && sudo rm -f "$file"
-					pwd; sudo chmod 777 build; ./build 1> /dev/null
+					[[ -f "$file" ]] && rm -f "$file"
+					pwd; chmod 777 build; ./build 1> /dev/null
 					
 				echo -e "\n\n**************************** This is a Deploy JOB $file **************************** "
 				if [[ -f "$file" ]]; then 
@@ -79,8 +79,8 @@ stages {
 				sh '''
 				set +x
 					file="$(pwd)/c_programs/ABC.exe"
-					[[ -f "$file" ]] && sudo rm -f "$file"
-					pwd; sudo chmod 777 build; ./build 1> /dev/null
+					[[ -f "$file" ]] && rm -f "$file"
+					pwd; chmod 777 build; ./build 1> /dev/null
 					
 				echo -e "\n\n**************************** This is a Deploy JOB for $file**************************** "
 				if [[ -f "$file" ]]; then 
