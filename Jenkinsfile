@@ -1,7 +1,6 @@
 pipeline {
 agent any
 stages {
-        stage('All stage') {
 		stage ('Build-check') {
 			    steps {
 				    input ('Press yes to continue')
@@ -24,4 +23,3 @@ stages {
 		    }
 	    }
 	}
-}
