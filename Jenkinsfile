@@ -2,9 +2,12 @@ pipeline {
 agent any
 stages {
 	stage ('All stages') {
-	parallel {
-		stage ('Build-check') {
-			    steps {
+	parameters {
+		string (var1:parameter 1,.....) 
+	}
+		parallel {
+			stage ('Build-check')
+			steps {
 				    echo 'Building ....'
 				    sh 'sleep 10'
 			    }
@@ -23,5 +26,4 @@ stages {
 		    }
 	    }
 	}
-}
 }
