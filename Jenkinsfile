@@ -12,6 +12,7 @@ stages {
 		    }
 		    stage ('Deploy') {
 			    steps {
+				     input ('Press yes to continue')
 				    echo 'Deploying to test Environment....'
 				    sh 'sleep 10'
 			    }
