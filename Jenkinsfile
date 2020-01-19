@@ -1,6 +1,8 @@
 pipeline {
 agent any
 stages {
+	stage ('Deploy')
+	parallel {
 		stage ('Build-check') {
 			    steps {
 				    input ('Press yes to continue')
@@ -9,21 +11,17 @@ stages {
 			    }
 		    }
 	stage ('Deploy') { 
-	paralle {
 			    steps {
 				     input ('Press yes to continue')
 				    echo 'Deploying to test Environment....'
 				    sh 'sleep 10'
 			    }
 		    }
-}
 	stage ('Test') { 
-	parallel {
 			    steps {
 				    echo 'Testing....'
 				    sh 'sleep 10'
 			    }
-	}
 		    }
 	    }
 	}
