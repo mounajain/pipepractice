@@ -5,6 +5,7 @@ stages {
             parallel {
 		    stage ('Build-check') {
 			    steps {
+				    input ('Press yes to continue')
 				    echo 'Building ....'
 				    sh 'sleep 10'
 			    }
