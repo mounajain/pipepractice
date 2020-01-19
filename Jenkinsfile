@@ -6,19 +6,19 @@ stages {
 		    stage ('Build-check') {
 			    steps {
 				    echo 'Building ....'
-				    sh 'sleep 100'
+				    sh 'sleep 10'
 			    }
 		    }
 		    stage ('Deploy') {
 			    steps {
 				    echo 'Deploying to test Environment....'
-				    sh 'sleep 100'
+				    sh 'sleep 10'
 			    }
 		    }
 		    stage ('Test') {
 			    steps {
 				    echo 'Testing....'
-				    sh 'sleep 100'
+				    sh 'sleep 10'
 			    }
 		    }
 	    }
