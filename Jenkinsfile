@@ -3,7 +3,7 @@ agent any
 stages {
 	stage ('All stages') {
 	parameters {
-		string (var1:parameter 1,.....) 
+		string (var1: parameter 1,.....) 
 	}
 		parallel {
 			stage ('Build-check')
